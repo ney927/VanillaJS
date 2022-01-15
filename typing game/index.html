@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS style sheet -->
+  <link rel="stylesheet" href="./style.css">
+  <title>Typing Game</title>
+</head>
+
+<body>
+
+  <div id=difficulty>
+    <label for="difficulty">Difficulty &emsp13;</label>
+    <select name="" id="dropdown">
+      <option value="Easy">Easy</option>
+      <option value="Medium">Medium</option>
+      <option value="Hard">Hard</option>
+    </select>
+  </div>
+
+  <div id=game>
+    <h1 id=title>Speed Typing Game</h1>
+    <div id=items>
+      <p id=timer>Timer: 10s</p>
+      <p id=score>Score: 0</p>
+    </div>
+    <p id=label>Type the following: </p>
+    <p id=word> Word </p>
+    <input id=typed type="text" placeholder="Type the word here...">
+  </div>
+
+  <div id=hidden>
+    <div id=endGame>
+      <h1>Time Ran Out</h1>
+      <p id=finalScore></p>
+      <button id=reload onclick="location.reload()">Reload</button>
+    </div>
+  </div>
+
+  <button id=settings><img src="./images/settings.png" alt="Settings"></button>
+
+  <!-- JS script sheet -->
+  <script src="./script.js"></script>
+</body>
+
+</html>
