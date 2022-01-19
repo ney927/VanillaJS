@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Text to Speech</title>
+</head>
+
+<body>
+
+  <div id=container>
+
+    <h1>Speech to Text Reader</h1>
+    <button id=bttn-custom>Enter Custom Text</button>
+
+    <!-- images -->
+    <div class=images-row>
+      <img class=bttn-img src="./images/drink.jpg" alt="">
+      <img class=bttn-img src="./images/food.jpg" alt="">
+      <img class=bttn-img src="./images/tired.jpg" alt="">
+      <img class=bttn-img src="./images/hurt.jpg" alt="">
+    </div>
+    <div class=images-row>
+      <img class=bttn-img src="./images/grandma.jpg" alt="">
+      <img class=bttn-img src="./images/home.jpg" alt="">
+      <img class=bttn-img src="./images/school.jpg" alt="">
+      <img class=bttn-img src="./images/outside.jpg" alt="">
+    </div>
+    <!-- <div class=images-row>
+      <img class=bttn-img src="./images/sad.jpg" alt="">
+      <img class=bttn-img src="./images/happy.jpg" alt="">
+      <img class=bttn-img src="./images/scared.jpg" alt="">
+      <img class=bttn-img src="./images/angry.jpg" alt="">
+    </div> -->
+
+  </div>
+
+  <div id=box-custom-hide>
+    <label id=close-custom>X</label>
+    <h2>Enter your text below</h2>
+    <select name="voices-select" id="voices-select"></select> <br> <br>
+    <input id=custom-text type="text"> <br>
+    <button id=speak-custom>Speak</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
