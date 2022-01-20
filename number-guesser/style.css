@@ -1,0 +1,57 @@
+#hide{
+  display: none;
+}
+
+#game-Over{
+  text-align: center;
+  color: #013606;
+  margin-top: 120px;
+  box-shadow: 0 0 100px black;
+  background-color: #f7eee4;
+  padding: 50px 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  height: 370px;
+}
+
+body{
+  background-image: url('./images/img.jpeg');
+  margin: 0;
+}
+
+#game{
+  text-align: center;
+  color: #013606;
+  margin-top: 120px;
+  box-shadow: 0 0 100px black;
+  background-color: #f7eee4;
+  padding: 50px 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  height: 370px;
+}
+
+#title{
+  font-size: 50px;
+  margin: 0;
+}
+
+#instruction{
+  font-size: 20px;
+  margin-top: 10;
+  margin-bottom: 50px;
+}
+
+#you-guessed{
+  font-size: 20px;
+  margin: 0;
+}
+
+#direction{
+  font-size: 30px;
+  margin: 0;
+  margin-top: 25px;
+}
+
+#guess{
+  font-size: 70px;
+  margin: 0;
+}
