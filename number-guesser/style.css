@@ -36,7 +36,6 @@ body{
 
 #instruction{
   font-size: 20px;
-  margin-top: 10;
   margin-bottom: 50px;
 }
 
@@ -54,4 +53,23 @@ body{
 #guess{
   font-size: 70px;
   margin: 0;
+}
+
+#playAgain{
+  margin-top: 30px;
+  padding: 25px;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: #eb8634;
+  box-shadow: 0 0 5px#013606;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#playAgain:hover{
+  background-color: #c9742e;
+}
+
+#stats{
+  font-size: 20px;
+  margin-top: 30px;
 }
