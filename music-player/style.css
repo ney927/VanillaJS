@@ -1,0 +1,144 @@
+body{
+  background-color:rgb(255, 212, 180);
+  /* text-align: center; */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-left: 0;
+}
+
+h1{
+  text-align: center;
+  margin-top: 100px;
+  color: rgb(160, 87, 31);
+}
+
+#title, #artist{
+  margin: 0;
+}
+
+#dur, #curr, #artist{
+  font-size: 15px;
+}
+
+#music{
+  text-align: center;
+  background-color:rgb(245, 160, 95);
+  width: 400px;
+  margin: 70px auto;
+  padding: 40px 10px 50px 10px;
+  font-size: 20px;
+  box-shadow: 0 0 25px rgb(129, 80, 43);;
+  border-radius: 10px;
+  position: relative;
+  /* z-index: 0; */
+}
+
+#nav{
+  text-align: center;
+  margin: auto;
+  background-color: rgb(211, 138, 83);
+  position: relative;
+  z-index: 1;
+  top: -100px;
+  width: 420px;
+  padding: 20px 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 15px 25px 0px rgb(129, 80, 43);
+}
+
+#menu-in{
+  text-align: center;
+  background-color: rgb(211, 138, 83);
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgb(129, 80, 43);
+}
+
+#bars{
+  position: relative;
+  z-index: 3;
+  top: -50px;
+  /* left: 115px; */
+  left: 190px;
+}
+
+#menu-out{
+  text-align: center;
+  background-color: rgb(211, 138, 83);
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.collapse-bttn{
+  font-size: 20px;
+}
+
+.collapse-bttn:hover{
+  color: rgb(255, 212, 180);
+  cursor: pointer;
+}
+
+.collapsibles{
+  margin-left: 30px;
+}
+
+.collapsibles:hover{
+  color: rgb(245, 160, 95);
+  cursor: pointer;
+}
+
+#contents{
+  padding-left: 50px;
+  text-align: left;
+  display: block;
+}
+
+button{
+  background-color: transparent;
+  border-style: none;
+}
+
+button:active{
+  color: rgb(96, 53, 21);
+}
+
+i{
+  font-size: 30px;
+}
+
+
+
+.progress-container {
+  background: rgb(255, 195, 149);
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 30px 0 15px 0;
+  height: 10px;
+  width: 100%;
+}
+
+.progress {
+  background-color: rgb(160, 87, 31);
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+#sleep-playlist, #study-playlist{
+  font-size: 20px;
+  text-decoration: underline;
+}
+#sleep-playlist:hover, #study-playlist:hover{
+  color: rgb(255, 212, 180);
+  cursor: pointer;
+}
