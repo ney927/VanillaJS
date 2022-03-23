@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chart</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+</head>
+
+<body>
+  <h1>Chart:</h1>
+
+  <canvas id="chart" width="1000" height="500"></canvas>
+
+  <script>
+
+    getData().catch(error => console.log(error));
+
+    async function getData() {
+      const response = await fetch('data.csv');
+      console.log(response);
+      const data = await response.text();
+      const table = data.split('\n').slice(1);
+      let years = [];
+      let temps = [];
+      table.forEach(elt => {
+        const row = elt.split(',');
+        years.push(row[0]);
+        temps.push(row[1])
+      });
+      console.log(years);
+      console.log(temps);
+      drawChart(years, temps);
+    }
+
+    function drawChart(labels, data) {
+      const context = document.getElementById('chart').getContext('2d');
+      const chart = new Chart(context, {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [
+            {
+              label: 'Temperature',
+              data: data,
+              backgroundColor: 'rgba(250, 100, 100)',
+              color: 'rgba(250, 100, 100)',
+            }
+          ]
+        },
+        options: {
+          responsive: false,
+          plugins: {
+            legend: {
+              position: 'top',
+            },
+            title: {
+              display: true,
+              text: 'Temperatures and Years'
+            }
+          }
+        },
+      });
+    }
+
+  </script>
+</body>
+
+</html>

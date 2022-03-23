@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch Practice</title>
+</head>
+<body>
+  <h1>Penguins</h1>
+
+  <script>
+
+    getText().catch(error => console.log(error));
+
+    async function getPenguin(url){
+      const response = await fetch(url);
+      const blob = await response.blob();
+      const img = document.createElement('img');
+      img.src = URL.createObjectURL(blob);
+      img.width = 400;
+      document.body.appendChild(img);
+    };
+
+    async function getText(){
+      const response = await fetch('text.txt');
+      const blob = await response.blob();
+      const reader = new FileReader();
+      reader.addEventListener('load', function(progressEvent){
+        let text = this.result;
+        text = text.split('\n');
+        text.forEach(url => getPenguin(url).catch(error => console.log(error)))
+      });
+
+      reader.readAsText(blob);
+    };
+  </script>
+</body>
+</html>
